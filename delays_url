@@ -1,0 +1,229 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Flight Delay from January 2017 - July 2022 | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Predicting the future flight delay based on the current data" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="travel,classification,time series analysis,regression" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/javascript">
+    window["pageRequestStartTime"] = 1666570396244;
+    window["pageRequestEndTime"] = 1666570396344;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/datasets/jawadkhattak/us-flight-delay-from-january-2017-july-2022" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=85d731a494547753f1bf" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=5b38fbf0fe266aae2a86" />
+  
+    
+ 
+      <script nonce="ZNc/XIMSREFObRLMltwKJg==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="ZNc/XIMSREFObRLMltwKJg==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-12629138-1', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="ZNc/XIMSREFObRLMltwKJg==" async src="https://www.googletagmanager.com/gtag/js?id=UA-12629138-1"></script>
+
+  
+    
+    <meta property="og:url" content="/datasets/jawadkhattak/us-flight-delay-from-january-2017-july-2022" />
+    <meta property="og:title" content="Flight Delay from January 2017 - July 2022" />
+    <meta property="og:description" content="Predicting the future flight delay based on the current data" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/2556899/4343247/ef8069b6c6c2be0837e174e2a238dbca/dataset-card.png?t=2022-10-17-22-25-22" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="ZNc/XIMSREFObRLMltwKJg==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"Flight Delay from January 2017 - July 2022","description":"This is flights delay data in the U.S. For more information about the data, go to URL below. \n \nhttps://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp\n ","url":"https://www.kaggle.com/jawadkhattak/us-flight-delay-from-january-2017-july-2022","version":2,"keywords":["subject, people and society, business, travel","technique, classification","technique, time series analysis","technique, regression"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["2556899"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Jawad Khattak","url":"https://www.kaggle.com/jawadkhattak","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/11513426-gr.jpg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/jawadkhattak/us-flight-delay-from-january-2017-july-2022/download?datasetVersionNumber=2","contentSize":"3876559 bytes"}],"commentCount":0,"dateModified":"2022-10-17T22:34:20.1Z","discussionUrl":"https://www.kaggle.com/jawadkhattak/us-flight-delay-from-january-2017-july-2022/discussion","alternateName":"Predicting the future flight delay based on the current data","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/2556899/4343247/ef8069b6c6c2be0837e174e2a238dbca/dataset-card.png?t=2022-10-17-22-25-22","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":0},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":62},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":403},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":2}]}</script>
+
+
+  
+    
+
+  
+    
+    
+<script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+
+    Kaggle.Current = {
+        antiForgeryToken: 'CfDJ8NPjaA7PR8ZKrH3DyCuHZZiQWuHQQVjjAaoT8mmEi1_OYTrdvKEW9ozQxfGFmb2LB7pxKrvqvjyF44r6gbrjRzwoaQ-VtkPk-CCK82LHJzI1mQ',
+        isAnonymous: true,
+        analyticsToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjY1NzEyOTYsIlVzZXJJZCI6MH0.atFJo019FIuPTZ79SuBbzfQhYzQANeglHeA8PU2eCP0',
+        analyticsTokenExpiry: 15,
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+
+    const decodeUserProperty = function (escapedUserProperty) {
+        escapedUserProperty = escapedUserProperty || "";
+        try {
+            const textVersion = new DOMParser().parseFromString(escapedUserProperty, "text/html").documentElement.textContent;
+            if (textVersion) {
+                return textVersion;
+            }
+        } catch(ex) {}
+        return escapedUserProperty;
+    }
+    Kaggle.Current.userDisplayName = decodeUserProperty(Kaggle.Current.userDisplayNameEscaped);
+    Kaggle.Current.userEmail = decodeUserProperty(Kaggle.Current.userEmailEscaped); 
+</script>
+
+    
+
+<script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/javascript">
+    var Kaggle = window.Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+
+    <script nonce="ZNc/XIMSREFObRLMltwKJg==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="ZNc/XIMSREFObRLMltwKJg==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="ZNc/XIMSREFObRLMltwKJg==" src="/static/assets/runtime.js?v=88cdc4bf60654c560dc5" data-turbolinks-track="reload"></script>
+  <script nonce="ZNc/XIMSREFObRLMltwKJg==" src="/static/assets/vendor.js?v=7357fda0a7a62b62514d" data-turbolinks-track="reload"></script>
+  <script nonce="ZNc/XIMSREFObRLMltwKJg==" src="/static/assets/app.js?v=bc1784d279e72e0aa7ce" data-turbolinks-track="reload"></script>
+    <script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+
+<div id="site-container"></div>
+<div data-component-name="NavigationContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="ZNc/XIMSREFObRLMltwKJg==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"navigationType":"BOTH_NAV"});performance && performance.mark && performance.mark("NavigationContainer.componentCouldBootstrap");</script>
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="ZNc/XIMSREFObRLMltwKJg==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":2556899,"slug":"us-flight-delay-from-january-2017-july-2022","title":"Flight Delay from January 2017 - July 2022","description":"This is flights delay data in the U.S. For more information about the data, go to URL below. \n \nhttps://www.transtats.bts.gov/OT_Delay/OT_DelayCause1.asp\n ","viewCount":403,"downloadCount":62,"owner":{"id":11513426,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/11513426-gr.jpg","name":"Jawad Khattak","profileUrl":"/jawadkhattak","slug":"jawadkhattak"},"license":{"id":1,"name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"overview":"Predicting the future flight delay based on the current data","collaboratorList":{"owner":{"userId":11513426,"profileUrl":"/jawadkhattak","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/11513426-gr.jpg","name":"Jawad Khattak","slug":"jawadkhattak","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/2556899/4343247/ef8069b6c6c2be0837e174e2a238dbca/dataset-cover.png?t=2022-10-17-22-25-22","data":{"totalSize":3876559,"isFileset":true,"canDownload":true,"firestorePath":"L676mpg2uWgQnwrVLRlv/versions/S208OboyD3klctPgYfqn","downloadUrl":"/datasets/jawadkhattak/jawadkhattak/download?datasetVersionNumber=2","versionId":4401738,"id":2589072},"voteCount":2,"downloadUrl":"/datasets/jawadkhattak/us-flight-delay-from-january-2017-july-2022/download?datasetVersionNumber=2","lastUpdateTime":"2022-10-17T22:34:20.100Z","datasetVersionNumber":2,"creatorDisplayName":"Jawad Khattak","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/2556899/4343247/ef8069b6c6c2be0837e174e2a238dbca/dataset-card.png?t=2022-10-17-22-25-22","categories":{"tags":[{"id":16461,"name":"travel","fullPath":"subject \u003E people and society \u003E business \u003E travel","listingUrl":"/datasets?group=public\u0026tagids=16461","description":"","datasetCount":3154,"notebookCount":1318,"tagUrl":"/tags/travel","displayName":"Travel"},{"id":13302,"name":"classification","fullPath":"technique \u003E classification","listingUrl":"/datasets?group=public\u0026tagids=13302","description":"","datasetCount":2885,"competitionCount":5,"notebookCount":16106,"tagUrl":"/tags/classification","displayName":"Classification"},{"id":13209,"name":"time series analysis","fullPath":"technique \u003E time series analysis","listingUrl":"/datasets?group=public\u0026tagids=13209","description":"","datasetCount":1283,"competitionCount":11,"notebookCount":2590,"tagUrl":"/tags/time-series-analysis","displayName":"Time Series Analysis"},{"id":14203,"name":"regression","fullPath":"technique \u003E regression","listingUrl":"/datasets?group=public\u0026tagids=14203","description":"","datasetCount":776,"competitionCount":21,"notebookCount":4655,"tagUrl":"/tags/regression","displayName":"Regression"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/jawadkhattak/us-flight-delay-from-january-2017-july-2022","forumId":2586125,"datasetVersionId":4343293,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":2,"diffType":"UNVERSIONED"},"@wf": "Datasets.DatasetMaterialDtoWireFormat3"});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script><script nonce="ZNc/XIMSREFObRLMltwKJg==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: [],
+    });
+</script>
+<script type="text/javascript" nonce="ZNc/XIMSREFObRLMltwKJg==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
